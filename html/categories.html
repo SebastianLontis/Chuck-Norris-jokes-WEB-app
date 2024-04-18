@@ -1,0 +1,35 @@
+<!-- categories.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuck Norris Jokes - Categories</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Chuck Norris Jokes</h1>
+    </header>
+    <nav>
+        <ul id="pageLinks">
+
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h2>Chuck Norris Jokes by Categories</h2>
+            <select id="categorySelect" onchange="displayJokesByCategory()">
+                <option value="">Select a category</option>
+                <!-- Options populated dynamically using JavaScript -->
+            </select>
+            <ul id="categoryJokes"></ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Chuck Norris Jokes</p>
+    </footer>
+    <script src="scripts/scripts.js" type="module" defer></script>
+</body>
+</html>
