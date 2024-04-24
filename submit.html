@@ -12,25 +12,22 @@
     </header>
     <nav>
         <ul>
-            <ul id="pageLinks">
-                <!-- Dynamically generated page links will be inserted here -->
-            </ul>
+            <ul id="menu"></ul>
         </ul>
     </nav>
     <main>
         <section>
-            <h2>Submit a Chuck Norris Joke</h2>
-            <form id="submitForm" onsubmit="submitJoke(event)">
-                <label for="jokeInput">Enter your joke:</label>
-                <textarea id="jokeInput" rows="3" required></textarea>
+            <h1>Submit a Joke</h1>
+            <form id="jokeForm">
+                <label for="jokeInput">Your Joke:</label>
+                <textarea id="jokeInput" required></textarea>
                 <button type="submit">Submit Joke</button>
             </form>
-            <p id="submissionMessage"></p>
         </section>
     </main>
     <footer>
         <p>&copy; 2024 Chuck Norris Jokes</p>
     </footer>
-    <script src="scripts/scripts.js" type="module" defer></script>
+    <script src="scripts/main.js" type="module"></script>
 </body>
 </html>
