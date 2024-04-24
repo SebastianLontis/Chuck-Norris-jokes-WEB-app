@@ -18,6 +18,7 @@ export function displayFavorites() {
         p.textContent = joke;
         const removeButton = document.createElement('button');
         removeButton.textContent = 'Remove from favorites';
+        removeButton.classList.add('remove-button'); // Adding the class
         removeButton.addEventListener('click', () => {
             removeFromFavorites(joke);
             displayFavorites();

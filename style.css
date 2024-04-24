@@ -5,7 +5,7 @@ body, h1, h2, h3, p, ul, li {
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: sans-serif;
     line-height: 1.6;
     background-color: #f7f7f7;
     color: #333;
@@ -24,6 +24,7 @@ a {
     color: inherit;
 }
 
+/* Page Layout */
 body {
     display: flex;
     flex-direction: column;
@@ -83,23 +84,35 @@ section {
     text-align: center;
 }
 
+#ChuckPic {
+    display: block;
+    margin: auto;
+    width: 50%; 
+    margin-bottom: 30px;
+}
+
 /* Random Joke Page */
 #categorySelect {
     margin-bottom: 15px;
     padding: 8px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    width: 100%;
-    max-width: 300px;
+    width: 50%;
+    max-width: 200px;
     font-size: 16px;
 }
 
 #jokeContainer {
+    width: 550px;
+    height: 200px; 
     background-color: #fff;
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 20px;
     margin-bottom: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #jokeContainer p {
@@ -107,6 +120,11 @@ section {
     font-size: 18px;
     font-weight: bold;
     color: #333;
+    text-align: center;
+}
+
+#jokeContainer p:last-child {
+    margin-bottom: 20px;
 }
 
 #getAnotherJoke, #addToFavs {
@@ -174,17 +192,37 @@ section {
     color: #333;
 }
 
-.removeButton {
-    background-color: #ff3333;
-    color: #fff;
-    padding: 5px 10px;
+.remove-button {
+    background-color: #903933; 
     border: none;
-    border-radius: 5px;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
     cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-    margin-left: 10px;
+    border-radius: 5px;
+    transition-duration: 0.4s;
 }
 
-.removeButton:hover {
-    background-color: #e60000;
+.remove-button:hover {
+    background-color: #d05e56; 
+    color: white;
+}
+
+.favButton {
+    background-color: #158758;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    margin-top: 10px;
+}
+
+.favButton:hover {
+    background-color: #2f610b;
 }

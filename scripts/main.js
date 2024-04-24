@@ -28,10 +28,8 @@ function populateMenu() {
 document.addEventListener('DOMContentLoaded', (event) => {
     populateMenu();
 
-    // Categories from the API
     const categories = ["None", "animal", "career", "celebrity", "dev", "explicit", "fashion", "food", "history", "money", "movie", "music", "political", "religion", "science", "sport", "travel"];
 
-    // Populate the select element with categories
     const categorySelect = document.getElementById('categorySelect');
     categories.forEach(category => {
         const option = document.createElement('option');
@@ -44,29 +42,37 @@ document.addEventListener('DOMContentLoaded', (event) => {
     document.getElementById('categorySelect').addEventListener('change', (event) => {
         const category = event.target.value;
         fetchRandomJoke(category === "None" ? "" : category).then(joke => {
-            const jokeContainer = document.getElementById('jokeContainer'); // Change 'randomJoke' to 'jokeContainer'
+            const jokeContainer = document.getElementById('jokeContainer'); 
             jokeContainer.textContent = joke;
             const favButton = document.createElement('button');
             favButton.textContent = 'Add to favs';
-            favButton.addEventListener('click', () => addToFavorites(joke));
+            favButton.classList.add('favButton');
+            favButton.addEventListener('click', () => {
+                addToFavorites(joke);
+                alert('Joke added to favorites!'); 
+            });
             jokeContainer.appendChild(favButton);
         });
     });
 
-    // Fetch another joke when the button is clicked
     document.getElementById('getAnotherJoke').addEventListener('click', () => {
         const category = document.getElementById('categorySelect').value;
         fetchRandomJoke(category === "None" ? "" : category).then(joke => {
-            const jokeContainer = document.getElementById('jokeContainer'); // Change 'randomJoke' to 'jokeContainer'
+            const jokeContainer = document.getElementById('jokeContainer'); 
             jokeContainer.textContent = joke;
             const favButton = document.createElement('button');
             favButton.textContent = 'Add to favs';
-            favButton.addEventListener('click', () => addToFavorites(joke));
+            favButton.classList.add('favButton');
+            favButton.addEventListener('click', () => {
+                addToFavorites(joke);
+                alert('Joke added to favorites!'); 
+            });
             jokeContainer.appendChild(favButton);
         });
     });
 });
 
+// For favorites.html
 document.addEventListener('DOMContentLoaded', (event) => {
     const jokeForm = document.getElementById('jokeForm');
     jokeForm.addEventListener('submit', (event) => {
