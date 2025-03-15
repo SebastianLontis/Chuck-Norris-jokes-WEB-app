@@ -4,7 +4,7 @@ import { removeFromFavorites, addToFavorites, displayFavorites } from './favorit
 const menuItems = [
     { name: 'Home', url: 'index.html' },
     { name: 'Random Joke', url: 'random.html' },
-    { name: 'Favorites', url: 'Favorites.html' },
+    { name: 'Favorites', url: 'favorites.html' },
     { name: 'Submit a Joke', url: 'submit.html' },
 ];
 
