@@ -9,23 +9,6 @@ body {
     line-height: 1.6;
     background-color: #f7f7f7;
     color: #333;
-}
-
-h1, h2, h3, p {
-    margin-bottom: 15px;
-}
-
-ul {
-    list-style-type: none;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-/* Page Layout */
-body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -47,6 +30,7 @@ nav {
 nav ul {
     display: flex;
     justify-content: center;
+    padding: 0;
 }
 
 nav ul li {
@@ -87,7 +71,7 @@ section {
 #ChuckPic {
     display: block;
     margin: auto;
-    width: 50%; 
+    width: 50%;
     margin-bottom: 30px;
 }
 
@@ -103,8 +87,8 @@ section {
 }
 
 #jokeContainer {
-    width: 550px;
-    height: 200px; 
+    width: 100%;
+    max-width: 550px;
     background-color: #fff;
     padding: 20px;
     border-radius: 20px;
@@ -193,7 +177,7 @@ section {
 }
 
 .remove-button {
-    background-color: #903933; 
+    background-color: #903933;
     border: none;
     color: white;
     padding: 10px 20px;
@@ -208,7 +192,7 @@ section {
 }
 
 .remove-button:hover {
-    background-color: #d05e56; 
+    background-color: #d05e56;
     color: white;
 }
 
@@ -225,4 +209,46 @@ section {
 
 .favButton:hover {
     background-color: #2f610b;
+}
+
+/* Media Queries for Mobile */
+@media only screen and (max-width: 768px) {
+    body {
+        padding: 0 10px;
+    }
+    #ChuckPic {
+        width: 80%;
+    }
+    header, footer, nav {
+        padding: 10px;
+    }
+    #categorySelect, #jokeInput {
+        width: 100%;
+    }
+    #jokeContainer {
+        width: 100%;
+        max-width: 90%;
+        padding: 15px;
+    }
+    #favoritesContainer {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    header h1, footer p {
+        font-size: 1.2rem;
+    }
+    #ChuckPic {
+        width: 90%;
+    }
+    #jokeContainer {
+        width: 100%;
+        padding: 10px;
+    }
+    #getAnotherJoke, #addToFavs {
+        width: 100%;
+        padding: 15px;
+    }
 }
